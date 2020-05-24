@@ -1,0 +1,9 @@
+package com.perso.streetcat.service;
+
+public class InvalidPasswordException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
+    public InvalidPasswordException() {
+        super("Incorrect password");
+    }
+}

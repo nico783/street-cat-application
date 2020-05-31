@@ -1,11 +1,12 @@
 version: '2'
 services:
   streetcat-postgresql:
-    image: postgres:12.1
+    image: postgres:11.5
     # volumes:
     #     - ~/volumes/jhipster/streetcat/postgresql/:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=streetcat
       - POSTGRES_PASSWORD=
+      - POSTGRES_DB=streetcat
     ports:
       - 5432:5432

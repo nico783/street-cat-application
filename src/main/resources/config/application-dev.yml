@@ -25,7 +25,7 @@ spring:
     include:
       - swagger
       # Uncomment to activate TLS for the dev profile
-      #- tls
+  #      - tls
   devtools:
     restart:
       enabled: true
@@ -48,12 +48,18 @@ spring:
     show-sql: true
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
-    contexts: dev, faker
+    contexts: dev
   mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    host: smtp.gmail.com
+    port: 587
+    username: streetchat60@gmail.com #Replace this field with your Gmail username.
+    password: Azerty!1 #Replace this field with your Gmail password/App password.
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:

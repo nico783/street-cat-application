@@ -41,7 +41,7 @@
     "gcpCloudSqlInstanceName": "street-cat-pro:europe-west1:street-cat-inst",
     "gcpCloudSqlUserName": "user4streetcat",
     "gcpCloudSqlDatabaseName": "street-cat-db",
-    "gaeServiceName": "streetcat",
+    "gaeServiceName": "default",
     "gaeLocation": "europe-west",
     "gaeInstanceClass": "F1",
     "gaeScalingType": "automatic",

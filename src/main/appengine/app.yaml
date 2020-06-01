@@ -12,6 +12,11 @@ handlers:
   script: auto
   secure: always
 automatic_scaling:
-  min_instances: 2
+  min_instances: 0
   max_instances: 2
 entrypoint: java -Dthin.root=. -jar streetcat-0.0.1-SNAPSHOT.jar
+
+#Sinon quand les health_check echoue le serveur redémarre.
+#Autre option: definir endoint "/_ah/health"
+health_check:
+    enable_health_check: False

@@ -1,0 +1,25 @@
+# ===================================================================
+# Spring Boot configuration for the "gae" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+server:
+  port: ${PORT}
+management:
+  health:
+    diskspace:
+      enabled: false
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: 'jdbc:postgresql://google/street-cat-db?cloudSqlInstance=street-cat-pro:europe-west1:street-cat-inst&socketFactory=com.google.cloud.sql.postgres.SocketFactory'
+    username: 'user4streetcat'
+    password: 'pwd4streetcat'
+    hikari:
+      maximumPoolSize: 8
